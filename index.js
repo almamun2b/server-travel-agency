@@ -24,7 +24,7 @@ async function run() {
         const worldTourCollection = database.collection("world-tour");
         const galaryCollection = database.collection("galary");
 
-        console.log(serviceCollection);
+        // console.log(servicesCollection);
 
         // GET API
         app.get('/services', async (req, res) => {
