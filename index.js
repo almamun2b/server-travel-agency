@@ -24,8 +24,6 @@ async function run() {
         const worldTourCollection = database.collection("world-tour");
         const galaryCollection = database.collection("galary");
 
-        // console.log(servicesCollection);
-
         // GET API
         app.get('/services', async (req, res) => {
             const query = {};
@@ -52,7 +50,6 @@ async function run() {
         // GET Single Services
         app.get('/services/:id', async (req, res) => {
             const id = req.params.id;
-            console.log("Getting Spesic Service by ID: ", id);
             const query = { _id: ObjectId(id) };
             const service = await servicesCollection.findOne(query);
             res.json(service);
